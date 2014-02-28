@@ -1,0 +1,28 @@
+var express = require('express'),
+    os = require("os");
+
+var app = module.exports = express.createServer();
+
+    app.configure(function () {
+ 	
+ 	var appRoot = __dirname + '/';
+
+    app.use(express.static(appRoot));
+    
+
+    app.use(express.bodyParser());
+    app.use(express.cookieParser());
+    app.use(express.methodOverride());
+    app.use(express.errorHandler({dumpExceptions:true, showStack:true}));
+    
+ 
+    app.set('views', appRoot);
+    
+    });
+
+    app.get("/", function(req, res){ res.sendfile('ui/index.html'); });
+
+    if (!module.parent) {
+        app.listen(5555);
+        console.log('Node Server running on port ' + app.address().port);
+    }
