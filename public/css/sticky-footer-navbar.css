@@ -37,3 +37,21 @@ body > .container {
 code {
   font-size: 80%;
 }
+
+
+
+
+
+.accordian{
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    margin-bottom: 20px;
+}
+.accordian-header{
+   border-radius: 5px;
+   background-color: #ddd;
+    padding: 10px 20px 10px 20px; 
+}
+.accordian-content{
+    padding: 10px 20px 10px 20px;
+}  
