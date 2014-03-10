@@ -1,0 +1,1 @@
+C:\Users\bdeva\Work\lancing\aaokhaokhisko\app/views/events/edit.blade.php
